@@ -3,7 +3,7 @@
 #SBATCH -J emas-compress
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
-#SBATCH --time=03:00:00
+#SBATCH --time=05:00:00
 #SBATCH -A plglogin
 #SBATCH -p plgrid
 
