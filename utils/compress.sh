@@ -15,4 +15,4 @@ rm -rf $results_path/**/*/log.*
 compressed_path=$results_path
 compressed_path+=".tar.gz"
 
-srun tar -zcvf $compressed_path $results_path
+srun tar -zcf $compressed_path $results_path
