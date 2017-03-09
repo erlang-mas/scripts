@@ -7,9 +7,10 @@
 #SBATCH -A plglogin
 #SBATCH -p plgrid
 
-results_path=$1
+results_path=$SCRATCH/erlang-mas/$1
 
-cd $SCRATCH/erlang-mas
+rm -rf $results_path/**/*/data.*
+rm -rf $results_path/**/*/log.*
 
 compressed_path=$results_path
 compressed_path+=".tar.gz"
