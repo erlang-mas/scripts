@@ -5,16 +5,16 @@
 experiment_dir=$1
 cd $experiment_dir
 
-emas_root=$HOME/erlang-mas/emas
-
 module use $HOME/.modulefiles
 module load erlang/19.2
 
+emas_dir=$HOME/erlang-mas/emas
+
+export NIF_DIR=$emas_dir/priv
+
 epmd -daemon
 
-export NIF_DIR=$emas_root/priv
-
-$emas_root/emas --population-count=24 \
+$emas_dir/emas --population-count=24 \
                 --population-size=100 \
                 --migration-probability=0.001 \
                 --node-migration-probability=0.0001 \

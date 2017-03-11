@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-num_nodes=$1
-simulation_dir=$2
+simulation_name=$1
+num_nodes=$2
+
+simulation_dir=$SCRATCH/erlang-mas/$simulation_name/$num_nodes
 
 retries=10
 
