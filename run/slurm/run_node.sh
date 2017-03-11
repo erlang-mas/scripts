@@ -19,6 +19,6 @@ $emas_root/emas --population-count=24 \
                 --migration-probability=0.001 \
                 --node-migration-probability=0.001 \
                 --time=90000 \
-                --output=$experiment_dir >> $HOME/test.logs
+                --output=$experiment_dir
 
 killall epmd
