@@ -11,6 +11,7 @@ simulation_name+=_$nodes_max
 partition=plgrid
 account=plglogin
 time="00:10:00"
+user=`id -u -n`
 
 base_dir=$SCRATCH/erlang-mas
 
@@ -26,5 +27,7 @@ for num_nodes in $(seq $nodes_min $nodes_step $nodes_max); do
          --cpus-per-task=24 \
          --time=$time \
          --job-name=emas-$num_nodes \
+         --mail-type=ALL \
+         --mail-user=$user \
          $HOME/erlang-mas/scripts/run/slurm/run_nodes.sh $simulation_dir
 done
