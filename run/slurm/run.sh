@@ -29,5 +29,5 @@ for num_nodes in $(seq $nodes_min $nodes_step $nodes_max); do
          --job-name=emas-$num_nodes \
          --mail-type=ALL \
          --mail-user=$user \
-         $HOME/erlang-mas/scripts/run/slurm/run_nodes.sh $simulation_dir
+         $HOME/erlang-mas/scripts/run/slurm/run_nodes.sh $num_nodes $simulation_dir
 done
