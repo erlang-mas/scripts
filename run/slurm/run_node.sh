@@ -17,7 +17,7 @@ export NIF_DIR=$emas_root/priv
 $emas_root/emas --population-count=24 \
                 --population-size=100 \
                 --migration-probability=0.001 \
-                --node-migration-probability=0.001 \
+                --node-migration-probability=0.0001 \
                 --time=90000 \
                 --output=$experiment_dir
 
