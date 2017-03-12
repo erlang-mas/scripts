@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/usr/bin/env bash
 
 #SBATCH -J emas-cleanup
 #SBATCH -N 1

@@ -1,4 +1,4 @@
-#!/bin/bash -l
+#!/usr/bin/env bash
 
 #SBATCH -J emas-compress
 #SBATCH -N 1
