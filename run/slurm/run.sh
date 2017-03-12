@@ -14,12 +14,6 @@ time="00:10:00"
 user=`id -u -n`
 
 scripts_dir=$HOME/erlang-mas/scripts/run/slurm
-slurm_logs_dir=$scripts_dir/logs/$simulation_name
-
-mkdir -p $slurm_logs_dir
-
-slurm_output_path=$slurm_logs_dir/slurm-%j.out
-slurm_errors_path=$slurm_logs_dir/slurm-%j.error
 
 for num_nodes in $(seq $nodes_min $nodes_step $nodes_max); do
   printf $num_nodes
@@ -33,7 +27,5 @@ for num_nodes in $(seq $nodes_min $nodes_step $nodes_max); do
          --job-name=emas-$num_nodes \
          --mail-type=ALL \
          --mail-user=$user \
-         --output=$slurm_output_path \
-         --error=$slurm_errors_path \
          $scripts_dir/run_nodes.sh $simulation_name $num_nodes
 done
