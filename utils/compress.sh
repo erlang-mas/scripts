@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-#SBATCH -J emas-compress
-#SBATCH -N 1
-#SBATCH --ntasks-per-node=1
+#SBATCH --job-name emas-compress
+#SBATCH --ntasks 1
 #SBATCH --time=05:00:00
-#SBATCH -A plglogin
-#SBATCH -p plgrid
+#SBATCH --account plglogin
+#SBATCH --partition plgrid
+#SBATCH --mail-type ALL
+#SBATCH --mail-user plglogin
 
 results_path=$SCRATCH/erlang-mas
 
