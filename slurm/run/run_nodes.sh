@@ -4,13 +4,12 @@ simulation_name=$1
 num_nodes=$2
 
 results_dir=$SCRATCH/erlang-mas
-scripts_dir=$HOME/erlang-mas/scripts/run/slurm
+scripts_dir=$HOME/erlang-mas/scripts/slurm/run
 
 for _ in $(seq 1 10); do
   experiment_id=`head /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1`
 
   experiment_path=$simulation_name/$num_nodes/$experiment_id
-
   experiment_dir=$results_dir/$experiment_path
   mkdir -p $experiment_dir
 

@@ -13,7 +13,7 @@ account=plglogin
 time="00:10:00"
 user=`id -u -n`
 
-scripts_dir=$HOME/erlang-mas/scripts/run/slurm
+scripts_dir=$HOME/erlang-mas/scripts/slurm/run
 
 for num_nodes in $(seq $nodes_min $nodes_step $nodes_max); do
   printf $num_nodes
