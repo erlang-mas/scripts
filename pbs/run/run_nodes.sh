@@ -18,7 +18,7 @@ for _ in $(seq 1 10); do
 
   hosts=(`cat $PBS_NODEFILE | uniq`)
 
-  printf $hosts | sort | awk '{printf "'\''%s'\''.\n", $0}' > $erlang_hosts
+  pbsdsh -o -u /bin/hostname | sort | awk '{printf "'\''%s'\''.\n", $0}' > $erlang_hosts
 
   for host in ${hosts[*]}; do
     pbsdsh -o -h $host $scripts_dir/run_node.sh $experiment_dir > $logs_dir/$host &
