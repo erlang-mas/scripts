@@ -5,7 +5,7 @@ migration_probability=$2
 node_migration_probability=$3
 topology=$4
 nodes_topology=$5
-simulation_name=$5
+simulation_name=$6
 
 # simulation_name=`date +%s`
 # simulation_name+=_$nodes_min
@@ -13,7 +13,7 @@ simulation_name=$5
 
 partition=plgrid
 account=plglogin
-time="00:08:00"
+time="00:20:00"
 user=`id -u -n`
 
 scripts_dir=$HOME/erlang-mas/scripts/slurm/run
