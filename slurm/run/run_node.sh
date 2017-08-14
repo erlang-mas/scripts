@@ -22,13 +22,19 @@ epmd -daemon
 
 $emas_dir/emas --population-count=24 \
                --population-size=100 \
-               --problem-size=1000 \
+               --problem-size=200 \
+               --reproduction-threshold=15 \
+               --migration-threshold=20 \
+               --fight-transfer=10 \
+               --reproduction-transfer=5 \
                --migration-probability=$migration_probability \
                --node-migration-probability=$node_migration_probability \
-               --time=300000 \
+               --time=1000000 \
                --genetic-ops=emas_rastrigin_ops \
                --topology=$topology \
                --nodes-topology=$nodes_topology \
-               --output=$experiment_dir
+               --stop-fitness=0.0 \
+               --output=$experiment_dir \
+               --debug
 
 killall epmd
